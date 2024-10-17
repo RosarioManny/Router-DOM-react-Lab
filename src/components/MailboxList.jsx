@@ -10,7 +10,6 @@ const MailboxList = (props) => {
                     <li>{currentbox.boxholder}</li>
                 </Link>
             ))}
-
         </ul>
         </>
     );
