@@ -1,18 +1,21 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+//Base model
 const initialState = {
     boxholder: '',
     boxsize: '',
 };
 
 function MailboxForm(props) {
-    const [formData, setFormData] = useState(initialState)
-    
-    const MailboxForm = (props) => {
-        const navigate = useNavigate();
-    };
 
+    // Uses the initialState and holds form information
+    const [formData, setFormData] = useState(initialState);
+
+    // Navigate function
+    const navigate = useNavigate();
+
+    // Saved input and  redirects once submited
     const handleSubmit = (e) => {
         e.preventDefault();
         props.addBox(formData);
@@ -20,9 +23,10 @@ function MailboxForm(props) {
         navigate('/mailbox')
     };
 
+    // Handles updates within the input fields 
     const handleChange = ({ target }) => {
         setFormData({ ...formData, [target.name]: target.value });
-      };
+    };
 
     return (
         <main>
@@ -44,6 +48,7 @@ function MailboxForm(props) {
                 // form 
                 onChange={handleChange}
                 >
+                    <option value="X-Small">X-Small</option>
                     <option value="Small">Small</option>
                     <option value="Medium">Medium</option>
                     <option value="Large">Large</option>
@@ -53,6 +58,6 @@ function MailboxForm(props) {
             </form>
         </main>
     );
-}
+};
 
 export default MailboxForm

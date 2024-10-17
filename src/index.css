@@ -1,9 +1,9 @@
-/* src/index.css */
-
 body {
   padding: 16px;
   display: flex;
   flex-direction: column;
+  background-color: #FEFDFF;
+  color: #2B303A;
 }
 
 #root {
@@ -11,14 +11,40 @@ body {
   height: 100%;
 }
 
+nav {
+  padding: .4rem
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
 ul {
   padding: 0;
   display: flex;
+  justify-content: space-around;
   list-style: none;
 }
+a {
+  font-size: 1.1rem;
+  color: #FEFDFF;
+  text-decoration: none;
+  padding: .8rem;
+  background-color: #58A4B0;
+  border-radius: 7%;
+}
 
+a:hover {
+  color: #FEFDFF;
+  background-color: #0C7C59;
+  
+}
 li {
-  margin-right: 16px;
+  /* margin-right: 16px; */
 }
 
 .mail-box {
@@ -44,5 +70,24 @@ textarea {
 }
 
 button {
-  background-color: #535bf2;
+  color: #FEFDFF;
+  padding: 10px;
+  background-color: #D64933;
+}
+
+button:hover {
+  color: #FEFDFF;
+  padding: 10px;
+  background-color: #0C7C59;
+}
+
+dl {
+  font-size: 1.5rem;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+dd {
+  margin: 0
 }
